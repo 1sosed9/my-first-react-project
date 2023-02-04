@@ -32,7 +32,7 @@ function Currencies() {
     }
 
     return <>
-        <CurrencySearch filterCurrencies={filterCurrencies} />
+        <CurrencySearch filterCurrencies={filterCurrencies}/>
         <Table>
             <thead>
                 <tr>
@@ -43,7 +43,7 @@ function Currencies() {
                 </tr>
             </thead>
             <tbody>
-                {(filteredCurrencies.length? filteredCurrencies: currencies).map(currency => <Currency currency={currency} />)}
+                {(filteredCurrencies.length? filteredCurrencies: currencies).map((currency,key) => <Currency currency={currency} key={key}/>)}
             </tbody>
         </Table>
     </>
